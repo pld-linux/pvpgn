@@ -43,7 +43,11 @@ grania w³asnych rozgrywek itp.
 
 %build
 cd src
-%configure
+%configure \
+	%{!?with_efence:--with-efence}
+	%{!?with_mysql:--with-mysql}
+	%{!?with_pgsql:--with-pgsql}
+	%{!?with_sqlite3:--with-sqlite3}
 %{__make}
 
 %install
