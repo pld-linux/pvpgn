@@ -35,7 +35,7 @@ tournaments, etc.
 PvPGN (Player vs Player Gaming Network) to wolne oprogramowanie które
 emuluje serwer Blizzarda Battle.net. Obecnie wspiera wszystkie gry
 Battle.net, takie jak StarCraft, Diablo II oraz Warcraft III, daje ci
-mo¿liwo¶æ uruchomienia w³asnego serwera, zarz±dania u¿ytkownikami,
+mo¿liwo¶æ uruchomienia w³asnego serwera, zarz±dzania u¿ytkownikami,
 grania w³asnych rozgrywek itp.
 
 %prep
