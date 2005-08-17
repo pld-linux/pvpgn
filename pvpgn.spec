@@ -8,8 +8,9 @@
 %bcond_with	mysql		# include MySQL user accounts support
 %bcond_with	pgsql		# include PostgreSQL user accounts suppor
 %bcond_with	sqlite3		# include SQLite3 user accounts support
+#
 Summary:	PvPGN - free software that emulates a Blizzard Battle.net server
-Summary(pl):	PvPGN - wolne opgramowanie które emuluje serwer Blizzarda Battle.net
+Summary(pl):	PvPGN - wolnodostêpne oprogramowanie emuluj±ce serwer Blizzarda Battle.net
 Name:		pvpgn
 Version:	1.7.7
 Release:	1
@@ -18,10 +19,10 @@ Group:		X11/Applications/Games
 Source0:	http://download.berlios.de/pvpgn/%{name}-%{version}.tar.bz2
 # Source0-md5:	465e18b04ca903eca7e2973a2d557e46
 URL:		http://pvpgn.berlios.de/
+%{?with_mysql:BuildRequires:	mysql-devel}
+%{?with_pgsql:BuildRequires:	postgresql-devel}
+%{?with_sqlite3:BuildRequires:	sqlite3-devel}
 BuildRequires:	zlib-devel
-%{?with_mysql:BuildRequires:      mysql-devel}
-%{?with_pgsql:BuildRequires:      postgresql-devel}
-%{?with_sqlite3:BuildRequires:      sqlite3-devel}
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -32,11 +33,11 @@ the power to run your own server, manage your own users, run your own
 tournaments, etc.
 
 %description -l pl
-PvPGN (Player vs Player Gaming Network) to wolne oprogramowanie które
-emuluje serwer Blizzarda Battle.net. Obecnie wspiera wszystkie gry
-Battle.net, takie jak StarCraft, Diablo II oraz Warcraft III, daje ci
-mo¿liwo¶æ uruchomienia w³asnego serwera, zarz±dzania u¿ytkownikami,
-grania w³asnych rozgrywek itp.
+PvPGN (Player vs Player Gaming Network) to wolnodostêpne
+oprogramowanie emuluj±ce serwer Blizzarda Battle.net. Obecnie wspiera
+wszystkie gry Battle.net, takie jak StarCraft, Diablo II oraz Warcraft
+III, daje mo¿liwo¶æ uruchomienia w³asnego serwera, zarz±dzania
+u¿ytkownikami, rozgrywania w³asnych turniejów itp.
 
 %prep
 %setup -q
@@ -53,8 +54,7 @@ cd src
 %install
 rm -rf $RPM_BUILD_ROOT
 
-cd src
-%{__make} install \
+%{__make} -C src install \
 	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
