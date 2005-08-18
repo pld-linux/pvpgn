@@ -35,7 +35,7 @@ tournaments, etc.
 %description -l pl
 PvPGN (Player vs Player Gaming Network) to wolnodostêpne
 oprogramowanie emuluj±ce serwer Blizzarda Battle.net. Obecnie wspiera
-wszystkie gry Battle.net, takie jak StarCraft, Diablo II oraz Warcraft
+szystkie gry Battle.net, takie jak StarCraft, Diablo II oraz Warcraft
 III, daje mo¿liwo¶æ uruchomienia w³asnego serwera, zarz±dzania
 u¿ytkownikami, rozgrywania w³asnych turniejów itp.
 
@@ -45,10 +45,10 @@ u¿ytkownikami, rozgrywania w³asnych turniejów itp.
 %build
 cd src
 %configure \
-	%{!?with_efence:--with-efence} \
-	%{!?with_mysql:--with-mysql} \
-	%{!?with_pgsql:--with-pgsql} \
-	%{!?with_sqlite3:--with-sqlite3}
+        %{?with_efence:--with-efence} \
+        %{?with_mysql:--with-mysql} \
+        %{?with_pgsql:--with-pgsql} \
+        %{?with_sqlite3:--with-sqlite3}
 %{__make}
 
 %install
