@@ -12,12 +12,12 @@
 Summary:	PvPGN - free software that emulates a Blizzard Battle.net server
 Summary(pl):	PvPGN - wolnodostêpne oprogramowanie emuluj±ce serwer Blizzarda Battle.net
 Name:		pvpgn
-Version:	1.7.7
+Version:	1.7.9
 Release:	1
 License:	GPL v2
 Group:		X11/Applications/Games
 Source0:	http://download.berlios.de/pvpgn/%{name}-%{version}.tar.bz2
-# Source0-md5:	465e18b04ca903eca7e2973a2d557e46
+# Source0-md5:	08d61ec6d5a791fd631af5ba8431b868
 URL:		http://pvpgn.berlios.de/
 %{?with_mysql:BuildRequires:	mysql-devel}
 %{?with_pgsql:BuildRequires:	postgresql-devel}
@@ -62,7 +62,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc BUGS CREDITS IGNOREME NEWS README README.ALPHA README.DEV TODO UPDATE version-history.txt
+%doc BUGS CREDITS IGNOREME NEWS README README.DEV TODO UPDATE version-history.txt
 %attr(755,root,root) %{_bindir}/*
 %attr(755,root,root) %{_sbindir}/*
 %attr(640,root,root) %config(noreplace) %verify(not md5 mtime size) %{_sysconfdir}/*
