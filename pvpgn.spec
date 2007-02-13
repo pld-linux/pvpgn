@@ -10,7 +10,7 @@
 %bcond_with	sqlite3		# include SQLite3 user accounts support
 #
 Summary:	PvPGN - free software that emulates a Blizzard Battle.net server
-Summary(pl.UTF-8):   PvPGN - wolnodostępne oprogramowanie emulujące serwer Blizzarda Battle.net
+Summary(pl.UTF-8):	PvPGN - wolnodostępne oprogramowanie emulujące serwer Blizzarda Battle.net
 Name:		pvpgn
 Version:	1.7.9
 Release:	1
